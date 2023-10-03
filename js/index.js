@@ -44,10 +44,10 @@ function setSound(soundVar){
 
 // The event () in this function stores the event that triggered the function 
 document.addEventListener('keydown', function(event){
-     let keyClass = "." + event.key;
-     let keyElement = document.querySelector(keyClass);
-     setSound(keyElement.innerHTML);
-     clickEffect(keyElement);
+     // let keyClass = "." + event.key;
+     // let keyElement = document.querySelector("." + event.key);
+     setSound(document.querySelector("." + event.key).innerHTML);
+     clickEffect(document.querySelector("." + event.key));
 })
 
 // click effect function 
